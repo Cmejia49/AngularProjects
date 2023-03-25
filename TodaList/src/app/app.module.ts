@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TodoListModuleComponent } from './Todo-List/todo-list-module/todo-list-module.component';
+import { TodoListModule} from './todo-list/todo-list.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListModuleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    TodoListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+h1{
+    font-style: italic;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
