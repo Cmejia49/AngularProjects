@@ -1,0 +1,44 @@
+
+.card{
+    margin: auto;
+    width: 50%;
+    border-style: solid;
+    border-width: 1;
+}
+.card-title{
+    border-style: solid;
+    border-top: 1px;
+    border-right: 0;
+    border-left: 0;
+    margin: 0;
+}
+.card-body{
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.btn-delete{
+    width: 45px;
+    height: 45px;
+    border-width: 0;
+    background-color: lightskyblue;
+}
+
+.btn-delete:hover{
+    width: 45px;
+    height: 45px;
+    border-width: 0;
+    color: white;
+    background-color: rgb(67, 34, 158);
+}
+.oper{
+    padding: 5px;
+    border-style: solid;
+    border-right: 1px;
+    border-bottom: 0;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+}
