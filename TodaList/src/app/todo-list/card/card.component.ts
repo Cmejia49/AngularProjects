@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
+  @Input() expetedTodo?:{id:number,title:string,body:string };
+  @Output() deleteTodoEvent = new EventEmitter<number>();
+
+  onAddBook(id?:number) {
+    this.deleteTodoEvent.emit(id);
+  }
+  constructor() {}
+  ngOnInit(): void { }
+
 
 }

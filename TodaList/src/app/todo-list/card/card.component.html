@@ -1,17 +1,12 @@
 
 <div class="card">
-    <h1 class="card-title">card title</h1>
-        <div class="card-bodys">
+    <p class="card-title mx-3 mt-2">{{expetedTodo?.title}}</p>
+        <div class="border-top card-body d-flex justify-content-between align-items-center ">
+
             <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Cras auctor purus at aliquam porta. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                 Etiam nec sagittis elit. Maecenas dignissim neque nulla, quis molestie purus malesuada gravida.
-                 Praesent vestibulum semper leo eget fermentum. Suspendisse sed volutpat metus. Aenean quis blandit leo,
-                  a ultrices lectus. 
-                Aenean mollis ligula pharetra nisi posuere ornare. Vestibulum sed nibh interdum, elementum ipsum a, hendrerit purus.
+              {{expetedTodo?.body}}
             </div>
-            <div class="oper">
-                <button class="btn-delete">x</button>
-            </div>
+         <button (click)="onAddBook(expetedTodo?.id)" class="btn btn-outline-primary btn-sm">x</button>
+
         </div>
 </div>

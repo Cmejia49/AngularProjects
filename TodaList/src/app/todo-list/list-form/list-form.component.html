@@ -1,2 +1,26 @@
-<p>list-form works!</p>
-<app-card></app-card>
+
+<div class="border border-dark rounded form">
+
+    <form #basicForm="ngForm" (ngSubmit)="pushData(basicForm)" class="p-3">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control"  name="title" id="title"  aria-describedby="Title" placeholder="Enter Title" ngModel>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" ngModel name="body" rows="3" placeholder="Enter Description"></textarea>
+        </div>
+        <br/>
+          <button type="submit" class="btn btn-outline-primary">add</button>
+    </form>
+    <hr/>
+<div>
+    <ul class="list-group ">
+        <li class="list-group-item mt-2" *ngFor="let tt of Todos; let i = index">
+            <app-card [expetedTodo]="tt" (deleteTodoEvent)="deleteTodo($event)"></app-card>
+        </li>
+    </ul>
+</div>
+</div>
+
