@@ -13,6 +13,8 @@ export class ListFormComponent {
     new Todo(2,"todo2","Task2"),
     new Todo(3,"todo3","Task3"),
   ];
+  title="";
+  body="";
 
   pushData(data:NgForm){
     let a = this.Todos[this.Todos.length-1];
@@ -26,6 +28,12 @@ export class ListFormComponent {
     let index = this.Todos.indexOf(todo,0);
     if(index > -1){
       this.Todos.splice(index,1);
+    }
   }
-}
+  getTodo(id:Number){
+    let todo = this.Todos.filter(x=>x.id === id)[0];
+    this.title = todo.title;
+    this.body = todo.body;
+  }
+
 }
